@@ -16,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/appetizers")
 @Tag(name = "Appetizer REST API Endpoints")
+@CrossOrigin(origins = "*")
 public class AppetizerController {
 
     @Autowired

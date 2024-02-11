@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Bruschetta",
+    "description": "Toasted bread topped with tomatoes, garlic, and basil",
+    "image": "bruschetta.png",
+    "price": 6.99
+  },
+  {
+    "id": 2,
+    "name": "Mozzarella Sticks",
+    "description": "Breaded and fried mozzarella cheese sticks",
+    "image": "mozarella-sticks.png",
+    "price": 8.5
+  },
+  {
+    "id": 3,
+    "name": "Spinach Artichoke Dip",
+    "description": "Creamy spinach and artichoke dip served with tortilla chips",
+    "image": "spinach-artichoke-dip.png",
+    "price": 9.25
+  },
+  {
+    "id": 4,
+    "name": "Chicken Wings",
+    "description": "Crispy chicken wings served with your choice of sauce",
+    "image": "chicken-wings.png",
+    "price": 10.99
+  },
+  {
+    "id": 5,
+    "name": "Shrimp Cocktail",
+    "description": "Chilled shrimp served with cocktail sauce",
+    "image": "shrimp-cocktail.png",
+    "price": 12.75
+  }
+]

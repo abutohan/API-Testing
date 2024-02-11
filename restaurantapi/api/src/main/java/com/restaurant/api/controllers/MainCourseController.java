@@ -16,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/main-courses")
 @Tag(name = "Main Course REST API Endpoints")
+@CrossOrigin(origins = "*")
 public class MainCourseController {
 
     @Autowired

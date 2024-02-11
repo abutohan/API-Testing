@@ -18,4 +18,5 @@ public interface AppetizerService {
     String deleteAppetizer(Long appetizerId);
 
      boolean isAppetizerExist(Long appetizerId);
+
 }

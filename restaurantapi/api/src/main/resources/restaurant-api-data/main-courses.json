@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Grilled Salmon",
+    "description": "Freshly grilled salmon served with steamed vegetables",
+    "image": "grilled-salmon.png",
+    "price": 15.99
+  },
+  {
+    "id": 2,
+    "name": "Filet Mignon",
+    "description": "Tender filet mignon steak served with mashed potatoes",
+    "image": "filet-mignon.png",
+    "price": 24.99
+  },
+  {
+    "id": 3,
+    "name": "Chicken Parmesan",
+    "description": "Breaded chicken breast topped with marinara sauce and melted mozzarella cheese",
+    "image": "chicken-parmesan.png",
+    "price": 18.5
+  },
+  {
+    "id": 4,
+    "name": "Vegetable Stir-Fry",
+    "description": "Assorted vegetables stir-fried in a savory sauce served over rice",
+    "image": "vegetable-stir-fry.png",
+    "price": 12.75
+  },
+  {
+    "id": 5,
+    "name": "Beef Tacos",
+    "description": "Three soft-shell tacos filled with seasoned ground beef, lettuce, cheese, and salsa",
+    "image": "beef-tacos.png",
+    "price": 10.25
+  }
+]
