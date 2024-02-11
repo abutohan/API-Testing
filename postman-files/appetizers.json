@@ -1,0 +1,37 @@
+[
+  {
+    "appetizer_id": 1,
+    "appetizer_name": "Bruschetta",
+    "appetizer_description": "Toasted bread topped with tomatoes, garlic, and basil",
+    "appetizer_img": "",
+    "appetizer_price": 6.99
+  },
+  {
+    "appetizer_id": 2,
+    "appetizer_name": "Mozzarella Sticks",
+    "appetizer_description": "Breaded and fried mozzarella cheese sticks",
+    "appetizer_img": "",
+    "appetizer_price": 8.5
+  },
+  {
+    "appetizer_id": 3,
+    "appetizer_name": "Spinach Artichoke Dip",
+    "appetizer_description": "Creamy spinach and artichoke dip served with tortilla chips",
+    "appetizer_img": "",
+    "appetizer_price": 9.25
+  },
+  {
+    "appetizer_id": 4,
+    "appetizer_name": "Chicken Wings",
+    "appetizer_description": "Crispy chicken wings served with your choice of sauce",
+    "appetizer_img": "",
+    "appetizer_price": 10.99
+  },
+  {
+    "appetizer_id": 5,
+    "appetizer_name": "Shrimp Cocktail",
+    "appetizer_description": "Chilled shrimp served with cocktail sauce",
+    "appetizer_img": "",
+    "appetizer_price": 12.75
+  }
+]

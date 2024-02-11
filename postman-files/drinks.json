@@ -1,0 +1,37 @@
+[
+  {
+    "drink_id": 1,
+    "drink_name": "Soda",
+    "drink_description": "Carbonated soft drink available in various flavors",
+    "drink_img": "",
+    "drink_price": 2.5
+  },
+  {
+    "drink_id": 2,
+    "drink_name": "Lemonade",
+    "drink_description": "Refreshing citrus-flavored drink made with lemon juice, water, and sugar",
+    "drink_img": "",
+    "drink_price": 3.0
+  },
+  {
+    "drink_id": 3,
+    "drink_name": "Iced Tea",
+    "drink_description": "Chilled tea served with ice cubes and optional sweetener or lemon",
+    "drink_img": "",
+    "drink_price": 2.75
+  },
+  {
+    "drink_id": 4,
+    "drink_name": "Orange Juice",
+    "drink_description": "Freshly squeezed juice extracted from oranges",
+    "drink_img": "",
+    "drink_price": 3.25
+  },
+  {
+    "drink_id": 5,
+    "drink_name": "Milkshake",
+    "drink_description": "Thick and creamy beverage made from milk, ice cream, and flavorings",
+    "drink_img": "",
+    "drink_price": 4.0
+  }
+]

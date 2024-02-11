@@ -1,0 +1,37 @@
+[
+  {
+    "main_course_id": 1,
+    "main_course_name": "Grilled Salmon",
+    "main_course_description": "Freshly grilled salmon served with steamed vegetables",
+    "main_course_img": "",
+    "main_course_price": 15.99
+  },
+  {
+    "main_course_id": 2,
+    "main_course_name": "Filet Mignon",
+    "main_course_description": "Tender filet mignon steak served with mashed potatoes",
+    "main_course_img": "",
+    "main_course_price": 24.99
+  },
+  {
+    "main_course_id": 3,
+    "main_course_name": "Chicken Parmesan",
+    "main_course_description": "Breaded chicken breast topped with marinara sauce and melted mozzarella cheese",
+    "main_course_img": "",
+    "main_course_price": 18.5
+  },
+  {
+    "main_course_id": 4,
+    "main_course_name": "Vegetable Stir-Fry",
+    "main_course_description": "Assorted vegetables stir-fried in a savory sauce served over rice",
+    "main_course_img": "",
+    "main_course_price": 12.75
+  },
+  {
+    "main_course_id": 5,
+    "main_course_name": "Beef Tacos",
+    "main_course_description": "Three soft-shell tacos filled with seasoned ground beef, lettuce, cheese, and salsa",
+    "main_course_img": "",
+    "main_course_price": 10.25
+  }
+]
