@@ -7,18 +7,19 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AppetizerRequestDTO {
-    @JsonProperty("appetizer_id")
+
+    @JsonProperty("id")
     private Long id;
 
-    @JsonProperty("appetizer_name")
+    @JsonProperty("name")
     private String name;
 
-    @JsonProperty("appetizer_description")
+    @JsonProperty("description")
     private String description;
 
-    @JsonProperty("appetizer_image")
+    @JsonProperty("image")
     private String image;
 
-    @JsonProperty("appetizer_price")
+    @JsonProperty("price")
     private double price;
 }

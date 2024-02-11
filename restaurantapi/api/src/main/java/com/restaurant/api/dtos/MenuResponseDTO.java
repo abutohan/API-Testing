@@ -13,12 +13,12 @@ import java.util.List;
 @Setter
 public class MenuResponseDTO {
 
-    @JsonProperty(value = "appetizer")
+    @JsonProperty(value = "appetizers")
     private List<AppetizerResponseDTO> appetizerResponseDTOList;
 
-    @JsonProperty(value = "drink")
+    @JsonProperty(value = "drinks")
     private List<DrinkResponseDTO> drinkResponseDTOList;
 
-    @JsonProperty(value = "main-course")
+    @JsonProperty(value = "main-courses")
     private List<MainCourseResponseDTO> mainCourseResponseDTOList;
 }

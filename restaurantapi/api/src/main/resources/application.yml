@@ -10,3 +10,6 @@ spring:
 server:
   servlet:
     context-path: /restaurant/api/v1
+springdoc:
+  swagger-ui:
+    path: /swagger-ui

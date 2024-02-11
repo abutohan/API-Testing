@@ -30,18 +30,15 @@ public class AppetizerServiceImpl implements AppetizerService {
     @Override
     public AppetizerResponseDTO saveAppetizer(AppetizerRequestDTO appetizerRequestDTO) {
         Appetizer appetizer = ObjectMapperUtils.map(appetizerRequestDTO, Appetizer.class);
-
         return ObjectMapperUtils.map(appetizerRepository.save(appetizer), AppetizerResponseDTO.class);
     }
 
     @Override
     public AppetizerResponseDTO updateAppetizer(Long appetizerId, AppetizerRequestDTO appetizerRequestDTO) {
         Appetizer updatedAppetizer = ObjectMapperUtils.map(appetizerRequestDTO, Appetizer.class);
-
         Appetizer appetizer = appetizerRepository.findById(appetizerId).get();
 
         appetizer.setName(updatedAppetizer.getName());
-        System.out.println(updatedAppetizer);
         appetizer.setDescription(updatedAppetizer.getDescription());
         appetizer.setImage(updatedAppetizer.getImage());
         appetizer.setPrice(updatedAppetizer.getPrice());
