@@ -8,18 +8,18 @@ import lombok.Setter;
 @Getter
 public class MainCourseResponseDTO {
 
-    @JsonProperty("main_course_id")
+    @JsonProperty("id")
     private Long id;
 
-    @JsonProperty("main_course_name")
+    @JsonProperty("name")
     private String name;
 
-    @JsonProperty("main_course_description")
+    @JsonProperty("description")
     private String description;
 
-    @JsonProperty("main_course_image")
+    @JsonProperty("image")
     private String image;
 
-    @JsonProperty("main_course_price")
+    @JsonProperty("price")
     private double price;
 }

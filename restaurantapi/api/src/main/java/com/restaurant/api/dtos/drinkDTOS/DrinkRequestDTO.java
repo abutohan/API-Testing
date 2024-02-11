@@ -8,19 +8,19 @@ import lombok.Setter;
 @Getter
 public class DrinkRequestDTO {
 
-    @JsonProperty("drink_id")
+    @JsonProperty("id")
     private Long id;
 
-    @JsonProperty("drink_name")
+    @JsonProperty("name")
     private String name;
 
-    @JsonProperty("drink_description")
+    @JsonProperty("description")
     private String description;
 
-    @JsonProperty("drink_image")
+    @JsonProperty("image")
     private String image;
 
-    @JsonProperty("drink_price")
+    @JsonProperty("price")
     private double price;
 }
 

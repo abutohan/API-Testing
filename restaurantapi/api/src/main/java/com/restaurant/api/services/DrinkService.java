@@ -15,6 +15,7 @@ public interface DrinkService {
 
     DrinkResponseDTO updateDrink(Long drinkId, DrinkRequestDTO drinkRequestDTO);
 
+    String deleteDrink(Long drinkId);
     boolean isDrinkExist (Long drinkId);
 
 }

@@ -30,7 +30,6 @@ public class DrinkServiceImpl implements DrinkService{
     @Override
     public DrinkResponseDTO saveDrink(DrinkRequestDTO drinkRequestDTO) {
         Drink drink = ObjectMapperUtils.map(drinkRequestDTO, Drink.class);
-
         return ObjectMapperUtils.map(drinkRepository.save(drink), DrinkResponseDTO.class);
     }
 
@@ -45,6 +44,12 @@ public class DrinkServiceImpl implements DrinkService{
         drink.setPrice(updateDrink.getPrice());
 
     return ObjectMapperUtils.map(drinkRepository.save(drink), DrinkResponseDTO.class);
+    }
+
+    @Override
+    public String deleteDrink(Long drinkId) {
+        drinkRepository.deleteById(drinkId);
+        return String.format("Drink with id %s deleted", drinkId);
     }
 
     @Override
