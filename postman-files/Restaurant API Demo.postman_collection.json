@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "52efc3ba-936d-436f-a958-49d47e901019",
+		"name": "Restaurant API Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15889656",
+		"_collection_link": "https://abi-api-testing.postman.co/workspace/Udemy-Postman-Training~12a31c08-88f9-4ff0-a333-6d6ca22cc63e/collection/15889656-52efc3ba-936d-436f-a958-49d47e901019?action=share&source=collection_link&creator=15889656"
+	},
+	"item": [
+		{
+			"name": "Drinks API",
+			"item": [
+				{
+					"name": "Drinks - Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.100.10:8080/restaurant/api/v1/drinks",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"10"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"api",
+								"v1",
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appetizer API",
+			"item": [
+				{
+					"name": "Appetizers - Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.100.10:8080/restaurant/api/v1/appetizers",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"10"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"api",
+								"v1",
+								"appetizers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appetizers - Get Single",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.100.10:8080/restaurant/api/v1/appetizers/1",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"10"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"api",
+								"v1",
+								"appetizers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appetizers - Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appetizer_name\": \"Adobo\",\r\n    \"appetizer_description\": \"Di masarap\",\r\n    \"appetizer_image\": \"\",\r\n    \"appetizer_price\": 50.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.100.10:8080/restaurant/api/v1/appetizers/0",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"10"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"api",
+								"v1",
+								"appetizers",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appetizers - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.100.10:8080/restaurant/api/v1/appetizers/1",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"10"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"api",
+								"v1",
+								"appetizers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Main Course",
+			"item": [
+				{
+					"name": "Main Courses - Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.100.10:8080/restaurant/api/v1/main-courses",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"10"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"api",
+								"v1",
+								"main-courses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Preparation",
+			"item": [
+				{
+					"name": "Drinks - Data Preparation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"drink_id\": {{drink_id}},\r\n    \"drink_name\": \"{{drink_name}}\",\r\n    \"drink_description\": \"{{drink_description}}\",\r\n    \"drink_img\": \"{{drink_img}}\",\r\n    \"drink_price\": {{drink_price}}\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.100.10:8080/restaurant/api/v1/drinks",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"10"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"api",
+								"v1",
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appetizers - Data Preparation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"appetizer_id\": {{appetizer_id}},\r\n    \"appetizer_name\": \"{{appetizer_name}}\",\r\n    \"appetizer_description\": \"{{appetizer_description}}\",\r\n    \"appetizer_img\": \"{{appetizer_img}}\",\r\n    \"appetizer_price\": {{appetizer_price}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.100.10:8080/restaurant/api/v1/appetizers",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"10"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"api",
+								"v1",
+								"appetizers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Main Courses - Data Preparation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"main_course_id\": {{main_course_id}},\r\n    \"main_course_name\": \"{{main_course_name}}\",\r\n    \"main_course_description\": \"{{main_course_description}}\",\r\n    \"main_course_img\": \"{{main_course_img}}\",\r\n    \"main_course_price\": {{main_course_price}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "192.168.100.10:8080/restaurant/api/v1/main-courses",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"10"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								"api",
+								"v1",
+								"main-courses"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// Load data from file",
+							"if (typeof pm.variables.get('requestsData') !== 'object') {",
+							"    pm.variables.set('requestsData', pm.iterationData.toObject());",
+							"}",
+							"const requestsData = pm.variables.get('requestsData');",
+							"",
+							"if (typeof requestsData !== 'object' || Object.keys(requestsData).length === 0) {",
+							"    console.log('No external data provided or object is empty.');",
+							"    return;",
+							"}",
+							"",
+							"// Find the current request",
+							"const currentRequest = requestsData.requests.filter(({name}) => name === pm.info.requestName)[0];",
+							"",
+							"// Skip the rest since we have no data",
+							"if (!currentRequest) {",
+							"    console.log(`Request ${pm.info.requestName} has no data defined.`);",
+							"    return;",
+							"}",
+							"",
+							"// Expose variables",
+							"const variables = currentRequest.data.shift();",
+							"",
+							"for (const [key,value] of Object.entries(variables)) {",
+							"    pm.variables.set(key, value);",
+							"}",
+							"",
+							"pm.variables.set('requestsData', requestsData);",
+							"",
+							"// Decide where to go next",
+							"if (currentRequest.data.length > 0) {",
+							"    postman.setNextRequest(pm.info.requestName);",
+							"}",
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Menu API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.100.10:8080/restaurant/api/v1/menu",
+					"host": [
+						"192",
+						"168",
+						"100",
+						"10"
+					],
+					"port": "8080",
+					"path": [
+						"restaurant",
+						"api",
+						"v1",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

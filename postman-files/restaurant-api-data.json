@@ -1,0 +1,126 @@
+[
+  {
+    "requests": [
+      {
+        "name": "Drinks - Data Preparation",
+        "data": [
+          {
+            "drink_id": 1,
+            "drink_name": "Soda",
+            "drink_description": "Carbonated soft drink available in various flavors",
+            "drink_img": "",
+            "drink_price": 2.5
+          },
+          {
+            "drink_id": 2,
+            "drink_name": "Lemonade",
+            "drink_description": "Refreshing citrus-flavored drink made with lemon juice, water, and sugar",
+            "drink_img": "",
+            "drink_price": 3.0
+          },
+          {
+            "drink_id": 3,
+            "drink_name": "Iced Tea",
+            "drink_description": "Chilled tea served with ice cubes and optional sweetener or lemon",
+            "drink_img": "",
+            "drink_price": 2.75
+          },
+          {
+            "drink_id": 4,
+            "drink_name": "Orange Juice",
+            "drink_description": "Freshly squeezed juice extracted from oranges",
+            "drink_img": "",
+            "drink_price": 3.25
+          },
+          {
+            "drink_id": 5,
+            "drink_name": "Milkshake",
+            "drink_description": "Thick and creamy beverage made from milk, ice cream, and flavorings",
+            "drink_img": "",
+            "drink_price": 4.0
+          }
+        ]
+      },
+      {
+        "name": "Appetizers - Data Preparation",
+        "data": [
+          {
+            "appetizer_id": 1,
+            "appetizer_name": "Bruschetta",
+            "appetizer_description": "Toasted bread topped with tomatoes, garlic, and basil",
+            "appetizer_img": "",
+            "appetizer_price": 6.99
+          },
+          {
+            "appetizer_id": 2,
+            "appetizer_name": "Mozzarella Sticks",
+            "appetizer_description": "Breaded and fried mozzarella cheese sticks",
+            "appetizer_img": "",
+            "appetizer_price": 8.5
+          },
+          {
+            "appetizer_id": 3,
+            "appetizer_name": "Spinach Artichoke Dip",
+            "appetizer_description": "Creamy spinach and artichoke dip served with tortilla chips",
+            "appetizer_img": "",
+            "appetizer_price": 9.25
+          },
+          {
+            "appetizer_id": 4,
+            "appetizer_name": "Chicken Wings",
+            "appetizer_description": "Crispy chicken wings served with your choice of sauce",
+            "appetizer_img": "",
+            "appetizer_price": 10.99
+          },
+          {
+            "appetizer_id": 5,
+            "appetizer_name": "Shrimp Cocktail",
+            "appetizer_description": "Chilled shrimp served with cocktail sauce",
+            "appetizer_img": "",
+            "appetizer_price": 12.75
+          }
+        ]
+      },
+      {
+        "name": "Main Courses - Data Preparation",
+        "data": [
+          {
+            "main_course_id": 1,
+            "main_course_name": "Grilled Salmon",
+            "main_course_description": "Freshly grilled salmon served with steamed vegetables",
+            "main_course_img": "",
+            "main_course_price": 15.99
+          },
+          {
+            "main_course_id": 2,
+            "main_course_name": "Filet Mignon",
+            "main_course_description": "Tender filet mignon steak served with mashed potatoes",
+            "main_course_img": "",
+            "main_course_price": 24.99
+          },
+          {
+            "main_course_id": 3,
+            "main_course_name": "Chicken Parmesan",
+            "main_course_description": "Breaded chicken breast topped with marinara sauce and melted mozzarella cheese",
+            "main_course_img": "",
+            "main_course_price": 18.5
+          },
+          {
+            "main_course_id": 4,
+            "main_course_name": "Vegetable Stir-Fry",
+            "main_course_description": "Assorted vegetables stir-fried in a savory sauce served over rice",
+            "main_course_img": "",
+            "main_course_price": 12.75
+          },
+          {
+            "main_course_id": 5,
+            "main_course_name": "Beef Tacos",
+            "main_course_description": "Three soft-shell tacos filled with seasoned ground beef, lettuce, cheese, and salsa",
+            "main_course_img": "",
+            "main_course_price": 10.25
+          }
+        ]
+      }
+    ]
+  }
+]
