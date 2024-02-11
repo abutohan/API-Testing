@@ -6,6 +6,7 @@ import com.restaurant.api.entities.MainCourse;
 import com.restaurant.api.repositories.AppetizerRepository;
 import com.restaurant.api.repositories.DrinkRepository;
 import com.restaurant.api.repositories.MainCourseRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -20,13 +21,13 @@ import static com.restaurant.api.utils.Helper.loadDataFromJsonFile;
 public class InitializeData implements CommandLineRunner {
 
     @Autowired
-    private AppetizerRepository appetizerRepository;
+    private  AppetizerRepository appetizerRepository;
 
     @Autowired
-    private DrinkRepository drinkRepository;
+    private  DrinkRepository drinkRepository;
 
     @Autowired
-    private MainCourseRepository mainCourseRepository;
+    private  MainCourseRepository mainCourseRepository;
 
     @Override
     public void run(String... args) throws Exception {

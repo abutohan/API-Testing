@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", fetchAppetizers("main-courses"));
 
 function fetchAppetizers(menu) {
-  fetch(`http://localhost:8080/restaurant/api/v1/${menu}`)
+  fetch(`http://18.139.187.143:8080/restaurant/api/v1/${menu}`)
     .then((response) => response.json())
     .then((data) => {
       displayData(data, menu);
