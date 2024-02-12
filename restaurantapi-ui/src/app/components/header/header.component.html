@@ -1,0 +1,23 @@
+<div>
+  <header>
+    <h1>Restaurant API Demo</h1>
+    <nav>
+      <ul>
+        <li
+          (click)="sayHello(menuType)"
+          class="menu-type"
+          *ngFor="let menu of menus | keyvalue"
+        >
+          <a
+            href="#"
+            (click)="toggleActive(linkRef, menu.key)"
+            [class.active]="linkRef === activeLink"
+            #linkRef
+            >{{ menu.key | capitalizeFirst }}</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <app-menu-card [menuType]="menuType"></app-menu-card>
+</div>

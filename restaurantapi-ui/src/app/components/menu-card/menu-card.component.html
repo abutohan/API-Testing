@@ -1,0 +1,15 @@
+<!-- <div *ngFor="let appetizer of appetizers">{{ appetizer.name }}</div>
+<div *ngFor="let drink of drinks">{{ drink.name }}</div> -->
+
+<div [ngSwitch]="menuType">
+  <div *ngSwitchCase="['appetizers']">
+    <div *ngFor="let appetizer of appetizers">{{ appetizer.name }}</div>
+  </div>
+  <div *ngSwitchCase="['drinks']">
+    <div *ngFor="let drink of drinks">{{ drink.name }}</div>
+  </div>
+  <div *ngSwitchCase="['main-courses']">
+    <div *ngFor="let mainCourse of mainCourses">{{ mainCourse.name }}</div>
+  </div>
+  <div *ngSwitchDefault>Default content when no case matches</div>
+</div>

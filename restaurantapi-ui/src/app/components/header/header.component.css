@@ -1,0 +1,42 @@
+h1,
+li {
+  text-align: center;
+}
+
+nav {
+  margin: 50px 0;
+}
+
+ul {
+  display: grid;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.menu-type {
+  list-style: none;
+}
+
+.menu-type:hover {
+  background-color: #db8052;
+  color: #fff;
+}
+
+.menu-type a:link,
+.menu-type a:hover {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* .menu-type a:visited,
+.menu-type a:active {
+  color: inherit;
+} */
+
+.active {
+  background-color: #db8052;
+  color: #fff;
+}
