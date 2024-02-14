@@ -25,21 +25,24 @@ export class MenuCardComponent {
     private getMainCourseData: GetMainCoursesService
   ) {}
 
-  greetChild(menuType: string) {
+  callAPI(menuType: string) {
     switch (menuType) {
       case 'appetizers':
         this.getAppetizersData.getAppetizers().subscribe((appetizers) => {
           this.appetizers = appetizers;
+          console.log(this.appetizers);
         });
         break;
       case 'drinks':
         this.getDrinksData.getDrinks().subscribe((drinks) => {
           this.drinks = drinks;
+          console.log(this.drinks);
         });
         break;
       case 'main-courses':
         this.getMainCourseData.getMainCourse().subscribe((mainCourses) => {
           this.mainCourses = mainCourses;
+          console.log(this.mainCourses);
         });
         break;
     }

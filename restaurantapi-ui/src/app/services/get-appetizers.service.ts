@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Appetizer } from '../models/appetizer';
+import { CONSTANTS } from 'src/environments/constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GetAppetizersService {
-  private apiURL = 'http://localhost:8080/restaurant/api/v1/appetizers';
+  private apiURL = `${CONSTANTS.DOMAIN}/${CONSTANTS.ENDPOINT_APPETIZERS}`;
 
   constructor(private http: HttpClient) {}
 

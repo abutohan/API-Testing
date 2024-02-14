@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Menu } from '../models/menu';
+import { CONSTANTS } from 'src/environments/constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GetMenusService {
-  private apiURL = 'http://localhost:8080/restaurant/api/v1/menu';
+  private apiURL = `${CONSTANTS.DOMAIN}/${CONSTANTS.ENDPOINT_MENU}`;
 
   constructor(private http: HttpClient) {}
 

@@ -37,7 +37,7 @@ export class HeaderComponent {
     this.menuType = menuType;
   }
 
-  sayHello(menuType: string) {
-    this.menuCardComponent.greetChild(menuType); // Call the method on the child component
+  callApiHeader(menuType: string) {
+    this.menuCardComponent.callAPI(menuType); // Call the method on the child component
   }
 }

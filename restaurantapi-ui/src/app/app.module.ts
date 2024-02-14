@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MenuCardComponent } from './components/menu-card/menu-card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CapitalizeFirstPipe } from './pipes/capitalize-first';
+import { FormatPricePipe } from './pipes/format-price.pipe';
+import { NoImageDirective } from './directives/no-image.directive';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { CapitalizeFirstPipe } from './pipes/capitalize-first';
     MenuCardComponent,
     HeaderComponent,
     CapitalizeFirstPipe,
+    FormatPricePipe,
+    NoImageDirective,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],

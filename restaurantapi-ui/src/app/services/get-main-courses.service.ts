@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MainCourse } from '../models/main-course';
+import { CONSTANTS } from 'src/environments/constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GetMainCoursesService {
-  private apiURL = 'http://localhost:8080/restaurant/api/v1/main-courses';
+  private apiURL = `${CONSTANTS.DOMAIN}/${CONSTANTS.ENDPOINT_MAINCOURSES}`;
 
   constructor(private http: HttpClient) {}
 
