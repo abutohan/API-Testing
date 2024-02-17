@@ -2,6 +2,7 @@ package com.restaurant.api.services.impl;
 
 import com.restaurant.api.dtos.maincourseDTOS.MainCourseRequestDTO;
 import com.restaurant.api.dtos.maincourseDTOS.MainCourseResponseDTO;
+import com.restaurant.api.entities.Appetizer;
 import com.restaurant.api.entities.MainCourse;
 import com.restaurant.api.repositories.MainCourseRepository;
 import com.restaurant.api.services.MainCourseService;
@@ -10,6 +11,7 @@ import com.sun.tools.javac.Main;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -25,7 +27,9 @@ public class MainCourseServiceImpl implements MainCourseService {
 
     @Override
     public List<MainCourseResponseDTO> getAllMainCourse() {
-        return ObjectMapperUtils.mapAll(mainCourseRepository.findAll(), MainCourseResponseDTO.class);
+        List<MainCourse> mainCourses = mainCourseRepository.findAll();
+        mainCourses.sort(Comparator.comparing(MainCourse::getId).reversed());
+        return ObjectMapperUtils.mapAll(mainCourses, MainCourseResponseDTO.class);
     }
 
     @Override

@@ -3,6 +3,10 @@ li {
   text-align: center;
 }
 
+h1 {
+  cursor: pointer;
+}
+
 nav {
   margin: 50px 0;
 }
@@ -30,11 +34,6 @@ ul {
   font-size: 18px;
   font-weight: 500;
 }
-
-/* .menu-type a:visited,
-.menu-type a:active {
-  color: inherit;
-} */
 
 .active {
   background-color: #db8052;

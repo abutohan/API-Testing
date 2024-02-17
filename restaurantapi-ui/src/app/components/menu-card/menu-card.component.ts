@@ -12,12 +12,13 @@ import { MainCourse } from 'src/app/models/main-course';
   styleUrls: ['./menu-card.component.css'],
 })
 export class MenuCardComponent {
-  @Input()
-  menuType: string = '';
+  @Input() //this is variable exposed to menu card component and html
+  menuTypeKey: string = '';
 
-  appetizers: Appetizer[] = [];
-  drinks: Drink[] = [];
-  mainCourses: MainCourse[] = [];
+  //variable exposed to html
+  appetizers!: Appetizer[];
+  drinks!: Drink[];
+  mainCourses!: MainCourse[];
 
   constructor(
     private getAppetizersData: GetAppetizersService,
@@ -25,8 +26,33 @@ export class MenuCardComponent {
     private getMainCourseData: GetMainCoursesService
   ) {}
 
-  callAPI(menuType: string) {
+  //method used by button to display alert
+  getData(id: number, menuType: string) {
     switch (menuType) {
+      case 'appetizers':
+        this.getAppetizersData.getSingleAppetizers(id).subscribe((data) => {
+          console.log(data);
+          alert(JSON.stringify(data));
+        });
+        break;
+      case 'drinks':
+        this.getDrinksData.getSingleDrinks(id).subscribe((data) => {
+          console.log(data);
+          alert(JSON.stringify(data));
+        });
+        break;
+      case 'main-courses':
+        this.getMainCourseData.getSingleMainCourse(id).subscribe((data) => {
+          console.log(data);
+          alert(JSON.stringify(data));
+        });
+        break;
+    }
+  }
+
+  //this function is expose to parent component - header
+  callAPI(menuTypeKey: string) {
+    switch (menuTypeKey) {
       case 'appetizers':
         this.getAppetizersData.getAppetizers().subscribe((appetizers) => {
           this.appetizers = appetizers;

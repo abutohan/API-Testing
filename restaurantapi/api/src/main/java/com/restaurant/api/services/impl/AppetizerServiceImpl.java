@@ -9,6 +9,7 @@ import com.restaurant.api.utils.ObjectMapperUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -24,7 +25,9 @@ public class AppetizerServiceImpl implements AppetizerService {
 
     @Override
     public List<AppetizerResponseDTO> getAllAppetizers() {
-        return ObjectMapperUtils.mapAll(appetizerRepository.findAll(), AppetizerResponseDTO.class);
+        List<Appetizer> appetizer = appetizerRepository.findAll();
+        appetizer.sort(Comparator.comparing(Appetizer::getId).reversed());
+        return ObjectMapperUtils.mapAll(appetizer, AppetizerResponseDTO.class);
     }
 
     @Override

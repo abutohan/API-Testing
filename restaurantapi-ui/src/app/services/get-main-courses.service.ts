@@ -15,4 +15,7 @@ export class GetMainCoursesService {
   getMainCourse(): Observable<MainCourse[]> {
     return this.http.get<MainCourse[]>(this.apiURL);
   }
+  getSingleMainCourse(id: number): Observable<MainCourse> {
+    return this.http.get<MainCourse>(`${this.apiURL}/${id}`);
+  }
 }

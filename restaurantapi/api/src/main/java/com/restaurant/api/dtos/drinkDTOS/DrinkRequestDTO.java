@@ -8,9 +8,6 @@ import lombok.Setter;
 @Getter
 public class DrinkRequestDTO {
 
-    @JsonProperty("id")
-    private Long id;
-
     @JsonProperty("name")
     private String name;
 

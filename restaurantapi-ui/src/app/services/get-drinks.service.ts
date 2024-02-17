@@ -15,4 +15,7 @@ export class GetDrinksService {
   getDrinks(): Observable<Drink[]> {
     return this.http.get<Drink[]>(this.apiURL);
   }
+  getSingleDrinks(id: number): Observable<Drink> {
+    return this.http.get<Drink>(`${this.apiURL}/${id}`);
+  }
 }

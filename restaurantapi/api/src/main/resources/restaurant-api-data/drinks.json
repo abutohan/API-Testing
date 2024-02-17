@@ -3,35 +3,35 @@
     "id": 1,
     "name": "Soda",
     "description": "Carbonated soft drink available in various flavors",
-    "image": "soda.png",
+    "image": "https://abutohan.s3.ap-southeast-1.amazonaws.com/img/drinks/soda.png",
     "price": 2.5
   },
   {
     "id": 2,
     "name": "Lemonade",
     "description": "Refreshing citrus-flavored drink made with lemon juice, water, and sugar",
-    "image": "lemonade.png",
+    "image": "https://abutohan.s3.ap-southeast-1.amazonaws.com/img/drinks/lemonade.png",
     "price": 3.0
   },
   {
     "id": 3,
     "name": "Iced Tea",
     "description": "Chilled tea served with ice cubes and optional sweetener or lemon",
-    "image": "iced-tea.png",
+    "image": "https://abutohan.s3.ap-southeast-1.amazonaws.com/img/drinks/iced-tea.png",
     "price": 2.75
   },
   {
     "id": 4,
     "name": "Orange Juice",
     "description": "Freshly squeezed juice extracted from oranges",
-    "image": "orange-juice.png",
+    "image": "https://abutohan.s3.ap-southeast-1.amazonaws.com/img/drinks/orange-juice.png",
     "price": 3.25
   },
   {
     "id": 5,
     "name": "Milkshake",
     "description": "Thick and creamy beverage made from milk, ice cream, and flavorings",
-    "image": "milk-shake.png",
+    "image": "https://abutohan.s3.ap-southeast-1.amazonaws.com/img/drinks/milk-shake.png",
     "price": 4.0
   }
 ]

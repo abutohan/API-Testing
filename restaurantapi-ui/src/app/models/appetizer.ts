@@ -1,9 +1,7 @@
-export class Appetizer {
-  constructor(
-    public id: number,
-    public name: string,
-    public description: string,
-    public image: string,
-    public price: number
-  ) {}
+export interface Appetizer {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  price: number;
 }

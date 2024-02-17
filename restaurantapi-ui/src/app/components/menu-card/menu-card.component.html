@@ -1,13 +1,9 @@
-<div [ngSwitch]="menuType">
+<div [ngSwitch]="menuTypeKey">
   <div *ngSwitchCase="['appetizers']">
     <div *ngFor="let appetizer of appetizers">
       <div class="card">
         <div class="menu-img">
-          <img
-            src="/assets/img/appetizers/{{ appetizer.image }}"
-            [alt]="appetizer.name"
-            appNoImage
-          />
+          <img src="{{ appetizer.image }}" [alt]="appetizer.name" appNoImage />
         </div>
         <div class="menu-detail">
           <h2 class="menu-name">{{ appetizer.name }}</h2>
@@ -46,7 +42,12 @@
             </svg>
             {{ appetizer.price | formatPrice }}
           </p>
-          <button class="button-53">Order</button>
+          <button
+            (click)="getData(appetizer.id, menuTypeKey)"
+            class="button-53"
+          >
+            Order
+          </button>
         </div>
       </div>
     </div>
@@ -54,12 +55,8 @@
   <div *ngSwitchCase="['drinks']">
     <div *ngFor="let drink of drinks">
       <div class="card">
-        <div class="menu-img" *ngIf="drink.image">
-          <img
-            src="/assets/img/drinks/{{ drink.image }}"
-            [alt]="drink.name"
-            appNoImage
-          />
+        <div class="menu-img">
+          <img src="{{ drink.image }}" [alt]="drink.name" appNoImage />
         </div>
         <div class="menu-detail">
           <h2 class="menu-name">{{ drink.name }}</h2>
@@ -98,7 +95,9 @@
             </svg>
             {{ drink.price | formatPrice }}
           </p>
-          <button class="button-53">Order</button>
+          <button (click)="getData(drink.id, menuTypeKey)" class="button-53">
+            Order
+          </button>
         </div>
       </div>
     </div>
@@ -108,7 +107,7 @@
       <div class="card">
         <div class="menu-img">
           <img
-            src="/assets/img/main-courses/{{ mainCourse.image }}"
+            src="{{ mainCourse.image }}"
             [alt]="mainCourse.name"
             appNoImage
           />
@@ -150,14 +149,17 @@
             </svg>
             {{ mainCourse.price | formatPrice }}
           </p>
-          <button class="button-53">Order</button>
+          <button
+            (click)="getData(mainCourse.id, menuTypeKey)"
+            class="button-53"
+          >
+            Order
+          </button>
         </div>
       </div>
     </div>
   </div>
-  <div *ngSwitchDefault>Default content when no case matches</div>
-
-  <ng-template #noImage>
-    <img src="/assets/img/empty-image.png" alt="No image" />
-  </ng-template>
+  <div *ngSwitchDefault>
+    <app-carousel></app-carousel>
+  </div>
 </div>

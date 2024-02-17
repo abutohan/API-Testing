@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { CapitalizeFirstPipe } from './pipes/capitalize-first';
 import { FormatPricePipe } from './pipes/format-price.pipe';
 import { NoImageDirective } from './directives/no-image.directive';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { NgxSplideModule } from 'ngx-splide';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,9 @@ import { NoImageDirective } from './directives/no-image.directive';
     CapitalizeFirstPipe,
     FormatPricePipe,
     NoImageDirective,
+    CarouselComponent,
   ],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, NgxSplideModule],
   providers: [],
   bootstrap: [AppComponent],
 })

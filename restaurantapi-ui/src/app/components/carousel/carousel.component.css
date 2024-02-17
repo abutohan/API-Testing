@@ -1,0 +1,28 @@
+.splide-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+::ng-deep .splide__arrow svg {
+  fill: #db8052;
+}
+
+::ng-deep .splide__pagination__page.is-active,
+::ng-deep.splide__pagination__page:hover {
+  background: #db8052;
+}
+
+::ng-deep .splide__arrow:hover:not(:disabled) svg {
+  fill: #db8052;
+}
+
+::ng-deep .splide__list {
+  display: flex;
+  align-items: center;
+}

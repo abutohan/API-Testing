@@ -15,4 +15,7 @@ export class GetAppetizersService {
   getAppetizers(): Observable<Appetizer[]> {
     return this.http.get<Appetizer[]>(this.apiURL);
   }
+  getSingleAppetizers(id: number): Observable<Appetizer> {
+    return this.http.get<Appetizer>(`${this.apiURL}/${id}`);
+  }
 }

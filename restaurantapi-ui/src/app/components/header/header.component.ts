@@ -10,34 +10,42 @@ import { MenuCardComponent } from '../menu-card/menu-card.component';
 })
 export class HeaderComponent {
   @ViewChild(MenuCardComponent) menuCardComponent!: MenuCardComponent;
-  menuType: string = '';
+
+  //variable exposed to html
+  menuTypeKey: string = ''; //receives the current type of menu being clicked
   activeLink: HTMLAnchorElement | null = null;
-  menus: Menu[] = [];
+  allMenus!: Menu[];
 
   constructor(private getMenuData: GetMenusService) {}
   ngOnInit(): void {
     this.getMenuData.getMenu().subscribe((menus) => {
-      this.menus = menus;
-      console.log(this.menus);
+      this.allMenus = menus;
+      console.log(this.allMenus);
     });
   }
 
-  toggleActive(link: HTMLAnchorElement, menuType: string): void {
+  toggleActive(link: HTMLAnchorElement, menuTypeKey: string): void {
     // Remove active class from previous active link
     if (this.activeLink) {
       this.activeLink.classList.remove('active');
     }
-
     // Add active class to clicked link
     link.classList.add('active');
 
     // Update activeLink reference
     this.activeLink = link;
-
-    this.menuType = menuType;
+    this.menuTypeKey = menuTypeKey;
   }
 
-  callApiHeader(menuType: string) {
-    this.menuCardComponent.callAPI(menuType); // Call the method on the child component
+  callApiHeader(menuTypeKey: string) {
+    // Call the method on the child component
+    this.menuCardComponent.callAPI(menuTypeKey);
+  }
+
+  refresh() {
+    this.menuTypeKey = '';
+    this.getMenuData.getMenu().subscribe((menus) => {
+      this.allMenus = menus;
+    });
   }
 }

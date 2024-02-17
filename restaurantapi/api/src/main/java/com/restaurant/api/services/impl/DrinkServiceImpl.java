@@ -2,6 +2,7 @@ package com.restaurant.api.services.impl;
 
 import com.restaurant.api.dtos.drinkDTOS.DrinkRequestDTO;
 import com.restaurant.api.dtos.drinkDTOS.DrinkResponseDTO;
+import com.restaurant.api.entities.Appetizer;
 import com.restaurant.api.entities.Drink;
 import com.restaurant.api.repositories.DrinkRepository;
 import com.restaurant.api.services.DrinkService;
@@ -9,6 +10,7 @@ import com.restaurant.api.utils.ObjectMapperUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -24,7 +26,9 @@ public class DrinkServiceImpl implements DrinkService{
 
     @Override
     public List<DrinkResponseDTO> getAllDrinks() {
-        return ObjectMapperUtils.mapAll(drinkRepository.findAll(), DrinkResponseDTO.class);
+        List<Drink> drinks = drinkRepository.findAll();
+        drinks.sort(Comparator.comparing(Drink::getId).reversed());
+        return ObjectMapperUtils.mapAll(drinks, DrinkResponseDTO.class);
     }
 
     @Override

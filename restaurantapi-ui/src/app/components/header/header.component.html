@@ -1,12 +1,12 @@
 <div>
   <header>
-    <h1>Restaurant API Demo</h1>
+    <h1 (click)="refresh()">Restaurant API Demo</h1>
     <nav>
       <ul>
         <li
-          (click)="callApiHeader(menuType)"
+          (click)="callApiHeader(menuTypeKey)"
           class="menu-type"
-          *ngFor="let menu of menus | keyvalue"
+          *ngFor="let menu of allMenus | keyvalue"
         >
           <a
             href="#"
@@ -19,5 +19,6 @@
       </ul>
     </nav>
   </header>
-  <app-menu-card [menuType]="menuType"></app-menu-card>
+
+  <app-menu-card [menuTypeKey]="menuTypeKey"></app-menu-card>
 </div>

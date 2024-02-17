@@ -6,7 +6,6 @@ import com.restaurant.api.entities.MainCourse;
 import com.restaurant.api.repositories.AppetizerRepository;
 import com.restaurant.api.repositories.DrinkRepository;
 import com.restaurant.api.repositories.MainCourseRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

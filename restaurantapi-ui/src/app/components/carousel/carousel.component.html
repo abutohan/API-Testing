@@ -1,0 +1,71 @@
+<div
+  class="splide-wrapper"
+  *ngIf="(allMenus | keyvalue).length > 0; else noData"
+>
+  <div>
+    <h2>Appetizers</h2>
+    <splide
+      [options]="{
+        type: 'loop',
+        perPage: 1,
+        keyboard: false,
+        autoplay: true,
+        interval: 2500,
+        padding: { left: '20%', right: '20%' },
+        width: 600,
+        gap: 30
+      }"
+    >
+      <splide-slide *ngFor="let menu of allMenus.appetizers">
+        <div class="img-container">
+          <img src="{{ menu.image }}" alt="{{ menu.name }}" appNoImage />
+        </div>
+      </splide-slide>
+    </splide>
+  </div>
+  <div>
+    <h2>Drinks</h2>
+    <splide
+      [options]="{
+        type: 'loop',
+        perPage: 1,
+        keyboard: false,
+        autoplay: true,
+        interval: 3100,
+        padding: { left: '20%', right: '20%' },
+        width: 600,
+        gap: 30
+      }"
+    >
+      <splide-slide *ngFor="let menu of allMenus.drinks">
+        <div class="img-container">
+          <img src="{{ menu.image }}" alt="{{ menu.name }}" appNoImage />
+        </div>
+      </splide-slide>
+    </splide>
+  </div>
+  <div>
+    <h2>Main Courses</h2>
+    <splide
+      [options]="{
+        type: 'loop',
+        perPage: 1,
+        keyboard: false,
+        autoplay: true,
+        interval: 2900,
+        padding: { left: '20%', right: '20%' },
+        width: 600,
+        gap: 30
+      }"
+    >
+      <splide-slide *ngFor="let menu of allMenus['main-courses']">
+        <div class="img-container">
+          <img src="{{ menu.image }}" alt="{{ menu.name }}" appNoImage />
+        </div>
+      </splide-slide>
+    </splide>
+  </div>
+</div>
+<ng-template #noData>
+  <h2>No data retrieve from API.</h2>
+</ng-template>
