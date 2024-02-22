@@ -1,126 +1,13 @@
 [
   {
-    "requests": [
-      {
-        "name": "Drinks - Data Preparation",
-        "data": [
-          {
-            "id": 1,
-            "name": "Soda",
-            "description": "Carbonated soft drink available in various flavors",
-            "img": "",
-            "price": 2.5
-          },
-          {
-            "id": 2,
-            "name": "Lemonade",
-            "description": "Refreshing citrus-flavored drink made with lemon juice, water, and sugar",
-            "img": "",
-            "price": 3.0
-          },
-          {
-            "id": 3,
-            "name": "Iced Tea",
-            "description": "Chilled tea served with ice cubes and optional sweetener or lemon",
-            "img": "",
-            "price": 2.75
-          },
-          {
-            "id": 4,
-            "name": "Orange Juice",
-            "description": "Freshly squeezed juice extracted from oranges",
-            "img": "",
-            "price": 3.25
-          },
-          {
-            "id": 5,
-            "name": "Milkshake",
-            "description": "Thick and creamy beverage made from milk, ice cream, and flavorings",
-            "img": "",
-            "price": 4.0
-          }
-        ]
-      },
-      {
-        "name": "Appetizers - Data Preparation",
-        "data": [
-          {
-            "id": 1,
-            "name": "Bruschetta",
-            "description": "Toasted bread topped with tomatoes, garlic, and basil",
-            "img": "",
-            "price": 6.99
-          },
-          {
-            "id": 2,
-            "name": "Mozzarella Sticks",
-            "description": "Breaded and fried mozzarella cheese sticks",
-            "img": "",
-            "price": 8.5
-          },
-          {
-            "id": 3,
-            "name": "Spinach Artichoke Dip",
-            "description": "Creamy spinach and artichoke dip served with tortilla chips",
-            "img": "",
-            "price": 9.25
-          },
-          {
-            "id": 4,
-            "name": "Chicken Wings",
-            "description": "Crispy chicken wings served with your choice of sauce",
-            "img": "",
-            "price": 10.99
-          },
-          {
-            "id": 5,
-            "name": "Shrimp Cocktail",
-            "description": "Chilled shrimp served with cocktail sauce",
-            "img": "",
-            "price": 12.75
-          }
-        ]
-      },
-      {
-        "name": "Main Courses - Data Preparation",
-        "data": [
-          {
-            "id": 1,
-            "name": "Grilled Salmon",
-            "description": "Freshly grilled salmon served with steamed vegetables",
-            "img": "",
-            "price": 15.99
-          },
-          {
-            "id": 2,
-            "name": "Filet Mignon",
-            "description": "Tender filet mignon steak served with mashed potatoes",
-            "img": "",
-            "price": 24.99
-          },
-          {
-            "id": 3,
-            "name": "Chicken Parmesan",
-            "description": "Breaded chicken breast topped with marinara sauce and melted mozzarella cheese",
-            "img": "",
-            "price": 18.5
-          },
-          {
-            "id": 4,
-            "name": "Vegetable Stir-Fry",
-            "description": "Assorted vegetables stir-fried in a savory sauce served over rice",
-            "img": "",
-            "price": 12.75
-          },
-          {
-            "id": 5,
-            "name": "Beef Tacos",
-            "description": "Three soft-shell tacos filled with seasoned ground beef, lettuce, cheese, and salsa",
-            "img": "",
-            "price": 10.25
-          }
-        ]
-      }
-    ]
+    "drink_name": "Kapeng Barako",
+    "drink_description": "Matapang, kaya ka ipaglaban.",
+    "drink_image": "https://t4.ftcdn.net/jpg/01/62/74/67/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.webp",
+    "drink_price": 60.0,
+    "drink_id_invalid": 1000,
+    "drink_updated_name": "Kapeng Barako Na Sweet",
+    "drink_updated_description": "Matapang, kaya ka ipaglaban. Yieeeee!",
+    "drink_updated_image": "https://i0.wp.com/thefilipinochronicle.com/wp-content/uploads/2022/11/Screenshot-2022-11-07-002616.png?fit=1048%2C678&ssl=1",
+    "drink_updated_price": 69.0
   }
 ]

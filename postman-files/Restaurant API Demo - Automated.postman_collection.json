@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "52efc3ba-936d-436f-a958-49d47e901019",
-		"name": "Restaurant API Demo",
+		"_postman_id": "8f6be2fe-5f35-4bc7-9656-494b68fd8f74",
+		"name": "Restaurant API Demo - Automated",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "15889656",
-		"_collection_link": "https://abi-api-testing.postman.co/workspace/Udemy-Postman-Training~12a31c08-88f9-4ff0-a333-6d6ca22cc63e/collection/15889656-52efc3ba-936d-436f-a958-49d47e901019?action=share&source=collection_link&creator=15889656"
+		"_collection_link": "https://abi-api-testing.postman.co/workspace/Udemy-Postman-Training~12a31c08-88f9-4ff0-a333-6d6ca22cc63e/collection/15889656-8f6be2fe-5f35-4bc7-9656-494b68fd8f74?action=share&source=collection_link&creator=15889656"
 	},
 	"item": [
 		{
@@ -369,13 +369,14 @@
 									"})\r",
 									"\r",
 									"pm.test(\"Successfully created the data\", function () {\r",
-									"    pm.expect(response.name).is.eql(\"Kapeng Barako\");\r",
-									"    pm.expect(response.description).is.eql(\"Matapang, kaya ka ipaglaban.\");\r",
-									"    pm.expect(response.image).is.eql(\"https://t4.ftcdn.net/jpg/01/62/74/67/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.webp\");\r",
-									"    pm.expect(response.price).is.eql(60.0);\r",
+									"    pm.expect(response.name).is.eql(`${pm.iterationData.get(\"drink_name\")}`);\r",
+									"    pm.expect(response.description).is.eql(`${pm.iterationData.get(\"drink_description\")}`);\r",
+									"    pm.expect(response.image).is.eql(`${pm.iterationData.get(\"drink_image\")}`);\r",
+									"    pm.expect(response.price).is.eql(pm.iterationData.get(\"drink_price\"));\r",
 									"    \r",
 									"})\r",
-									""
+									"\r",
+									"pm.collectionVariables.set(\"drink_id\", response.id);"
 								],
 								"type": "text/javascript"
 							}
@@ -386,7 +387,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Kapeng Barako\",\r\n    \"description\": \"Matapang, kaya ka ipaglaban.\",\r\n    \"image\": \"https://t4.ftcdn.net/jpg/01/62/74/67/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.webp\",\r\n    \"price\": 60.00\r\n}\r\n\r\n",
+							"raw": "{\r\n    \"name\": \"{{drink_name}}\",\r\n    \"description\": \"{{drink_description}}\",\r\n    \"image\": \"{{drink_image}}\",\r\n    \"price\": {{drink_price}}\r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -447,10 +448,10 @@
 									"});",
 									"",
 									"pm.test(\"Response contains the correct data\", function () {",
-									"    pm.expect(response.name).is.eql(\"Kapeng Barako\");",
-									"    pm.expect(response.description).is.eql(\"Matapang, kaya ka ipaglaban.\");",
-									"    pm.expect(response.image).is.eql(\"https://t4.ftcdn.net/jpg/01/62/74/67/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.webp\");",
-									"    pm.expect(response.price).is.equal(60);",
+									"    pm.expect(response.name).is.eql(`${pm.iterationData.get(\"drink_name\")}`);",
+									"    pm.expect(response.description).is.eql(`${pm.iterationData.get(\"drink_description\")}`);",
+									"    pm.expect(response.image).is.eql(`${pm.iterationData.get(\"drink_image\")}`);",
+									"    pm.expect(response.price).is.eql(pm.iterationData.get(\"drink_price\"));",
 									"    ",
 									"})",
 									""
@@ -475,7 +476,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/restaurant/api/v1/drinks/8",
+							"raw": "{{baseURL}}/restaurant/api/v1/drinks/{{drink_id}}",
 							"host": [
 								"{{baseURL}}"
 							],
@@ -484,7 +485,7 @@
 								"api",
 								"v1",
 								"drinks",
-								"8"
+								"{{drink_id}}"
 							]
 						}
 					},
@@ -508,7 +509,7 @@
 									"})",
 									"",
 									"pm.test(\"Response contains error message\", function () {",
-									"    pm.expect(response.message).to.eql(\"No Drink found with id -1\")",
+									"    pm.expect(response.message).to.eql(`No Drink found with id ${pm.iterationData.get(\"drink_id_invalid\")}`)",
 									"});",
 									"",
 									""
@@ -533,7 +534,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/restaurant/api/v1/drinks/-1",
+							"raw": "{{baseURL}}/restaurant/api/v1/drinks/{{drink_id_invalid}}",
 							"host": [
 								"{{baseURL}}"
 							],
@@ -542,7 +543,7 @@
 								"api",
 								"v1",
 								"drinks",
-								"-1"
+								"{{drink_id_invalid}}"
 							]
 						}
 					},
@@ -583,10 +584,10 @@
 									"})\r",
 									"\r",
 									"pm.test(\"Response contains updated data\", function () {\r",
-									"    pm.expect(response.name).is.eql(\"Kapeng Barako\");\r",
-									"    pm.expect(response.description).is.eql(\"Matapang, kaya ka ipaglaban. Yieeeeee!\");\r",
-									"    pm.expect(response.image).is.eql(\"https://t4.ftcdn.net/jpg/01/62/74/67/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.webp\");\r",
-									"    pm.expect(response.price).is.eql(60.0);\r",
+									"    pm.expect(response.name).is.eql(`${pm.iterationData.get(\"drink_updated_name\")}`);\r",
+									"    pm.expect(response.description).is.eql(`${pm.iterationData.get(\"drink_updated_description\")}`);\r",
+									"    pm.expect(response.image).is.eql(`${pm.iterationData.get(\"drink_updated_image\")}`);\r",
+									"    pm.expect(response.price).is.eql(pm.iterationData.get(\"drink_updated_price\"));\r",
 									"    \r",
 									"})\r",
 									""
@@ -600,7 +601,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Kapeng Barako\",\r\n    \"description\": \"Matapang, kaya ka ipaglaban. Yieeeeee!\",\r\n    \"image\": \"https://t4.ftcdn.net/jpg/01/62/74/67/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.webp\",\r\n    \"price\": 60.00\r\n}\r\n\r\n",
+							"raw": "{\r\n    \"name\": \"{{drink_updated_name}}\",\r\n    \"description\": \"{{drink_updated_description}}\",\r\n    \"image\": \"{{drink_updated_image}}\",\r\n    \"price\": {{drink_updated_price}}\r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -608,7 +609,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/restaurant/api/v1/drinks/6",
+							"raw": "{{baseURL}}/restaurant/api/v1/drinks/{{drink_id}}",
 							"host": [
 								"{{baseURL}}"
 							],
@@ -617,7 +618,7 @@
 								"api",
 								"v1",
 								"drinks",
-								"6"
+								"{{drink_id}}"
 							]
 						}
 					},
@@ -641,7 +642,7 @@
 									"})\r",
 									"\r",
 									"pm.test(\"Response contains error message\", function () {\r",
-									"    pm.expect(response.message).to.eql(\"No Drink found with id -1.\")\r",
+									"    pm.expect(response.message).to.eql(`No Drink found with id ${pm.iterationData.get(\"drink_id_invalid\")}.`);\r",
 									"});\r",
 									"\r",
 									""
@@ -655,7 +656,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Kapeng Barako\",\r\n    \"description\": \"Matapang, kaya ka ipaglaban. Yieeeeee!\",\r\n    \"image\": \"https://t4.ftcdn.net/jpg/01/62/74/67/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.webp\",\r\n    \"price\": 60.00\r\n}\r\n\r\n",
+							"raw": "{\r\n    \"name\": \"{{drink_updated_name}}\",\r\n    \"description\": \"{{drink_updated_description}}\",\r\n    \"image\": \"{{drink_updated_image}}\",\r\n    \"price\": {{drink_updated_price}}\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -663,7 +664,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/restaurant/api/v1/drinks/-1",
+							"raw": "{{baseURL}}/restaurant/api/v1/drinks/{{drink_id_invalid}}",
 							"host": [
 								"{{baseURL}}"
 							],
@@ -672,7 +673,7 @@
 								"api",
 								"v1",
 								"drinks",
-								"-1"
+								"{{drink_id_invalid}}"
 							]
 						}
 					},
@@ -713,10 +714,10 @@
 									"})\r",
 									"\r",
 									"pm.test(\"Response contains the updated data\", function () {\r",
-									"    pm.expect(response.name).is.eql(\"Kapeng Barako\");\r",
-									"    pm.expect(response.description).is.eql(\"Matapang, kaya ka ipaglaban. Yieeeeee!\");\r",
-									"    pm.expect(response.image).is.eql(\"https://t4.ftcdn.net/jpg/01/62/74/67/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.webp\");\r",
-									"    pm.expect(response.price).is.eql(60.0);\r",
+									"    pm.expect(response.name).is.eql(`${pm.iterationData.get(\"drink_updated_name\")}`);\r",
+									"    pm.expect(response.description).is.eql(`${pm.iterationData.get(\"drink_updated_description\")}`);\r",
+									"    pm.expect(response.image).is.eql(`${pm.iterationData.get(\"drink_updated_image\")}`);\r",
+									"    pm.expect(response.price).is.eql(pm.iterationData.get(\"drink_updated_price\"));\r",
 									"    \r",
 									"})\r",
 									""
@@ -733,7 +734,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Kapeng Barako\",\r\n    \"description\": \"Matapang, kaya ka ipaglaban. Yieeeeee!\",\r\n    \"image\": \"https://t4.ftcdn.net/jpg/01/62/74/67/360_F_162746788_uxm2CkE5xQq2fy7DVJASe40lMcvSQ52A.webp\",\r\n    \"price\": 60.00\r\n}\r\n\r\n",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -741,7 +742,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/restaurant/api/v1/drinks/6",
+							"raw": "{{baseURL}}/restaurant/api/v1/drinks/{{drink_id}}",
 							"host": [
 								"{{baseURL}}"
 							],
@@ -750,7 +751,7 @@
 								"api",
 								"v1",
 								"drinks",
-								"6"
+								"{{drink_id}}"
 							]
 						}
 					},
@@ -774,7 +775,7 @@
 									"})",
 									"",
 									"pm.test(\"Successfully deleted the data\", function () {",
-									"    pm.expect(response.message).to.eql(\"Drink with id 6 deleted\")",
+									"    pm.expect(response.message).to.eql(`Drink with id ${pm.collectionVariables.get(\"drink_id\")} deleted`)",
 									"});",
 									"",
 									""
@@ -796,7 +797,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/restaurant/api/v1/drinks/6",
+							"raw": "{{baseURL}}/restaurant/api/v1/drinks/{{drink_id}}",
 							"host": [
 								"{{baseURL}}"
 							],
@@ -805,7 +806,7 @@
 								"api",
 								"v1",
 								"drinks",
-								"6"
+								"{{drink_id}}"
 							]
 						}
 					},
@@ -829,7 +830,7 @@
 									"})",
 									"",
 									"pm.test(\"Response contains error message\", function () {",
-									"    pm.expect(response.message).to.eql(\"No Drink found with id -1.\")",
+									"     pm.expect(response.message).to.eql(`No Drink found with id ${pm.iterationData.get(\"drink_id_invalid\")}.`)",
 									"});",
 									"",
 									""
@@ -851,7 +852,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/restaurant/api/v1/drinks/-1",
+							"raw": "{{baseURL}}/restaurant/api/v1/drinks/{{drink_id_invalid}}",
 							"host": [
 								"{{baseURL}}"
 							],
@@ -860,7 +861,7 @@
 								"api",
 								"v1",
 								"drinks",
-								"-1"
+								"{{drink_id_invalid}}"
 							]
 						}
 					},
@@ -884,7 +885,7 @@
 									"})",
 									"",
 									"pm.test(\"Response contains error message\", function () {",
-									"    pm.expect(response.message).to.eql(\"No Drink found with id 6\")",
+									"    pm.expect(response.message).to.eql(`No Drink found with id ${pm.collectionVariables.get(\"drink_id\")}`)",
 									"});",
 									""
 								],
@@ -908,7 +909,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/restaurant/api/v1/drinks/6",
+							"raw": "{{baseURL}}/restaurant/api/v1/drinks/{{drink_id}}",
 							"host": [
 								"{{baseURL}}"
 							],
@@ -917,7 +918,7 @@
 								"api",
 								"v1",
 								"drinks",
-								"6"
+								"{{drink_id}}"
 							]
 						}
 					},
@@ -1109,6 +1110,12 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "drink_id",
+			"value": ""
 		}
 	]
 }
