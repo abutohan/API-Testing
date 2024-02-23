@@ -57,6 +57,6 @@ public class MainCourseController {
             description = "Provide the Main Course id you wish to delete.")
     public ResponseEntity<?> deleteMainCourse(@PathVariable("mainCourseId") Long mainCourseId){
         if (mainCourseService.isMainCourseExist(mainCourseId)) return new ResponseEntity<>(new CustomResponse(mainCourseService.deleteMainCourse(mainCourseId)), HttpStatus.OK);
-        else return new ResponseEntity<>(new CustomResponse(String.format("No Main Course found with id %s", mainCourseId)), HttpStatus.NOT_FOUND);
+        else return new ResponseEntity<>(new CustomResponse(String.format("No Main Course found with id %s.", mainCourseId)), HttpStatus.NOT_FOUND);
     }
 }

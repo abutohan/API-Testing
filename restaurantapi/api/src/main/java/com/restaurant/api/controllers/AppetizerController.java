@@ -34,7 +34,7 @@ public class AppetizerController {
                description = "Takes an id of a Appetizer and return it's details.")
     public ResponseEntity<?> getAppetizer(@PathVariable("appetizerId") Long appetizerId){
         if(appetizerService.isAppetizerExist(appetizerId)) return new ResponseEntity<>(appetizerService.getAppetizer(appetizerId), HttpStatus.OK);
-        else return new ResponseEntity<>(new CustomResponse(String.format("No Appetizer with id %s", appetizerId)), HttpStatus.NOT_FOUND);
+        else return new ResponseEntity<>(new CustomResponse(String.format("No Appetizer found with id %s.", appetizerId)), HttpStatus.NOT_FOUND);
     }
 
     @PostMapping
@@ -49,7 +49,7 @@ public class AppetizerController {
                description = "Provide the Appetizer id and populate the required request body fields.")
     public ResponseEntity<?> updateAppetizer(@PathVariable("appetizerId") Long appetizerId, @RequestBody AppetizerRequestDTO appetizerRequestDTO){
         if(appetizerService.isAppetizerExist(appetizerId)) return new ResponseEntity<>(appetizerService.updateAppetizer(appetizerId, appetizerRequestDTO), HttpStatus.OK);
-        else return new ResponseEntity<>(new CustomResponse(String.format("No Appetizer with id %s", appetizerId)), HttpStatus.NOT_FOUND);
+        else return new ResponseEntity<>(new CustomResponse(String.format("No Appetizer found with id %s.", appetizerId)), HttpStatus.NOT_FOUND);
     }
 
     @DeleteMapping("/{appetizerId}")
@@ -58,7 +58,7 @@ public class AppetizerController {
     public ResponseEntity <?> deleteAppetizer (@PathVariable("appetizerId") Long appetizerId){
         if(appetizerService.isAppetizerExist(appetizerId))
             return new ResponseEntity<>(new CustomResponse(appetizerService.deleteAppetizer(appetizerId)), HttpStatus.OK);
-        else return new ResponseEntity<>(new CustomResponse(String.format("No Appetizer with id %s", appetizerId)), HttpStatus.NOT_FOUND);
+        else return new ResponseEntity<>(new CustomResponse(String.format("No Appetizer found with id %s.", appetizerId)), HttpStatus.NOT_FOUND);
     }
 
 }

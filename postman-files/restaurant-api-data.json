@@ -8,6 +8,15 @@
     "drink_updated_name": "Kapeng Barako Na Sweet",
     "drink_updated_description": "Matapang, kaya ka ipaglaban. Yieeeee!",
     "drink_updated_image": "https://i0.wp.com/thefilipinochronicle.com/wp-content/uploads/2022/11/Screenshot-2022-11-07-002616.png?fit=1048%2C678&ssl=1",
-    "drink_updated_price": 69.0
+    "drink_updated_price": 69.0,
+    "appetizer_name": "Halo-Halo",
+    "appetizer_description": "Masarap pag maraming gatas.",
+    "appetizer_image": "https://c1.staticflickr.com/5/4139/4819196229_90ea592cc7_b.jpg",
+    "appetizer_price": 25.0,
+    "appetizer_id_invalid": 2000,
+    "appetizer_updated_name": "Halo-Halo with Leche Flan",
+    "appetizer_updated_description": "Mas masarap pag maraming gatas.",
+    "appetizer_updated_image": "https://th.bing.com/th/id/R.836e72367fd2e649b27e8bf5b3c749d6?rik=71tJXxD3Jxrv0g&riu=http%3a%2f%2fi.ytimg.com%2fvi%2fPSVnIA9foHQ%2fhqdefault.jpg&ehk=FQ2PkpV0hXV%2fBhEhOqZDweLpkaevDTFA5TuCEPruHHU%3d&risl=&pid=ImgRaw&r=0",
+    "appetizer_updated_price": 30.0
   }
 ]

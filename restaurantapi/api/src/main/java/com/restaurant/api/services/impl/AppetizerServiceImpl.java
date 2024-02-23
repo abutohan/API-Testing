@@ -53,7 +53,7 @@ public class AppetizerServiceImpl implements AppetizerService {
     public String deleteAppetizer(Long appetizerId) {
         appetizerRepository.deleteById(appetizerId);
 
-        return String.format("Appetizer with id %s deleted", appetizerId);
+        return String.format("Appetizer with id %s deleted.", appetizerId);
     }
 
     @Override

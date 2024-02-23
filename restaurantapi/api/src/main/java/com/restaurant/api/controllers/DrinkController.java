@@ -34,7 +34,7 @@ public class DrinkController {
                description = "Takes an id of a Drink and return it's details.")
     public ResponseEntity<?> getDrink(@PathVariable("drinkId") Long drinkId){
         if(drinkService.isDrinkExist(drinkId)) return new ResponseEntity<>(drinkService.getDrink(drinkId), HttpStatus.OK);
-        else return new ResponseEntity<>(new CustomResponse(String.format("No Drink found with id %s", drinkId)), HttpStatus.NOT_FOUND);
+        else return new ResponseEntity<>(new CustomResponse(String.format("No Drink found with id %s.", drinkId)), HttpStatus.NOT_FOUND);
     }
 
     @PostMapping

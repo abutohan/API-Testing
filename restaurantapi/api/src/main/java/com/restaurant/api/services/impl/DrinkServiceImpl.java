@@ -53,7 +53,7 @@ public class DrinkServiceImpl implements DrinkService{
     @Override
     public String deleteDrink(Long drinkId) {
         drinkRepository.deleteById(drinkId);
-        return String.format("Drink with id %s deleted", drinkId);
+        return String.format("Drink with id %s deleted.", drinkId);
     }
 
     @Override
